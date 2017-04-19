@@ -4,6 +4,19 @@
     <h1>My Cart</h1>
   </header>
 
+<% if !cart.present? %>
+    <div class="panel pane-default items">
+      <h4>
+        your shopping cart is empty!
+      </h4>
+      <p>
+        <%= link_to 'Add more things', :root %>?
+      </p>
+    </div>
+  <% else %>
+
+
+
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -49,5 +62,5 @@
       <% end %>
     </div>
   </div>
-
+ <% end %>
 </section>
