@@ -133,4 +133,50 @@ cat3.products.create!({
 })
 
 
+User.create!({
+  first_name: "Dan",
+  last_name: "Meow",
+  password: "123",
+  password_confirmation: "123",
+  email: "dan@meow.ca"
+})
+
+User.create!({
+  first_name: "Hoho",
+  last_name: "Meow",
+  password: "123",
+  password_confirmation: "123",
+  email: "hoho@meow.ca"
+})
+
+
+
+Review.create!({
+  product_id: 1,
+  user_id: 1,
+  rating: 4,
+  description: "not bad"
+})
+
+Review.create!({
+  product_id: 1,
+  user_id: 2,
+  rating: 3,
+  description: "it's okay"
+})
+
+Review.create!({
+  product_id: 2,
+  user_id: 2,
+  rating: 5,
+  description: "Perfect!"
+})
+
+Review.create!({
+  product_id: 2,
+  user_id: 1,
+  rating: 3,
+  description: "umm.. maybe not buy again"
+})
+
 puts "DONE!"

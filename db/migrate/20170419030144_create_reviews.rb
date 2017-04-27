@@ -1,12 +1,10 @@
 class CreateReviews < ActiveRecord::Migration
   def change
     create_table :reviews do |t|
-      t.string :product_id
-      t.string :user_id
-      t.string :description
-      t.string :rating
-      t.string :created_at
-      t.string :updated_at
+      t.references :product, index: true, foreign_key: true
+      t.references :user, index: true, foreign_key: true
+      t.integer :rating
+      t.text :description
 
       t.timestamps null: false
     end
